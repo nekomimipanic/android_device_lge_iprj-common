@@ -70,7 +70,7 @@ case "$target" in
 esac
 
 case "$target" in
-    "p930" | "su640" )
+    "p930" | "su640" | "i_dcm" )
         if [ "`getprop gsm.version.baseband`" == "" ]; then
             setprop gsm.version.baseband `dd if=/dev/block/mmcblk0p14 bs=128000 count=10 | strings |grep -- "-MDM92" | head -1`
         fi
